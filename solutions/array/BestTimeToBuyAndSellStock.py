@@ -1,8 +1,14 @@
+"""
+Solution of Best Time to Buy and Sell Stock
+--------------------------------------------------------------------------------------------------------------
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/
+"""
+
 from typing import List
+
 
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
-        arr = []
         min_price = 10**4 + 1
         max_price = -1
         max_profit = 0
@@ -13,7 +19,9 @@ class Solution:
             if price <= min_price and not increasing:
                 min_price = price
             # else if previous trend was decreasing and price greater now, update maximum price
-            elif (price > min_price and not increasing) or (price > max_price and increasing):
+            elif (price > min_price and not increasing) or (
+                price > max_price and increasing
+            ):
                 increasing = True
                 max_price = max(price, max_price)
             # If previous trend was increasing and price smaller now, trend is now decreasing
@@ -24,4 +32,4 @@ class Solution:
                 max_price = -1
                 min_price = min(min_price, price)
 
-        return max(max_profit, max_price - min_price) 
+        return max(max_profit, max_price - min_price)
