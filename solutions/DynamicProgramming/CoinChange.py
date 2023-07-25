@@ -1,5 +1,5 @@
 """
-Solution of Evaluate Reverse Coin Change
+Solution of Coin Change
 --------------------------------------------------------------------------------------------------------------
 https://leetcode.com/problems/coin-change/description/
 """
