@@ -4,6 +4,7 @@ Solution of Validate Binary Search Tree
 https://leetcode.com/problems/validate-binary-search-tree/description/
 """
 
+from math import inf
 from typing import Optional
 
 
